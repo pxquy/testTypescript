@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Add from "./pages/Add";
 import Edit from "./pages/Edit";
 import List from "./pages/List";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -44,12 +46,12 @@ function App() {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/login">
                   Đăng nhập
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="register">
                   Đăng ký
                 </a>
               </li>
@@ -74,6 +76,8 @@ function App() {
         <Route index element={<List />} />
         <Route path="/add" element={<Add />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Toaster />
     </>
